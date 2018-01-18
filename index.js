@@ -10,7 +10,9 @@ function displayError() {
 }
 
 function showCommits(el) {
-  $.get(el)
+  $.get(el.dataset.url, function (data) {
+    $('#details').html("<ul>"+data+"</ul>")
+  })
 }
 
 $(document).ready(function (){
