@@ -10,7 +10,7 @@ function displayError() {
 function displayResults(data) {
   resultsHTML = data.items.map (result =>
     ` <a href="${result.html_url}">${result.name}</a>
-      <p><a href="#" data-url="${result.url}" data-owner="${result.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
+      <p><a href="#" data-url="${result.url}" onclick="showCommits(this)">Show Commits</a></p>
       <p>${result.description}</p>`)
   $("#results").html(resultsHTML)
 }
