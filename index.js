@@ -13,6 +13,7 @@ function displayResults(data) {
       ${item.name} -
       <a href='#' data-url="${item.url}/commits" onclick='${showCommits(this)}'> Get Commits</a>
     </li>`) + "</ul>"
+    debugger
   $("#results").html(resultsHTML)
 }
 
