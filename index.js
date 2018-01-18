@@ -8,8 +8,7 @@ function displayError() {
 }
 
 function displayResults() {
-    $("#results").html("<ul>" + data.items.map(item => "<li>" + item.name + "- <a href='#' data-url='" + item.url + "/commits" + "'onclick='showCommits(this)'> Get Commits</a></li>") + "</ul>")
-  }
+  $("#results").html("<ul>" + data.items.map(item => "<li>" + item.name + "- <a href='#' data-url='" + item.url + "/commits" + "'onclick='showCommits(this)'> Get Commits</a></li>") + "</ul>")
 }
 
 function showCommits(el) {
