@@ -8,7 +8,11 @@ function displayError() {
 }
 
 function displayResults(data) {
-  const resultsHTML = "<ul>" + data.items.map(item => "<li>" + item.name + "- <a href='#' data-url='" + item.url + "/commits" + "'onclick='showCommits(this)'> Get Commits</a></li>" + "</ul>")
+  const resultsHTML = "<ul>" + data.items.map(item =>
+    `<li>
+      ${item.name} -
+      <a href='#' data-url="${item.url}/commits" onclick='${showCommits(this)}'> Get Commits</a>
+    </li>`) + "</ul>"
   $("#results").html(resultsHTML)
 }
 
