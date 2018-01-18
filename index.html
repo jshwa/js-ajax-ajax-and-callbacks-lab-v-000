@@ -41,7 +41,7 @@
       <ul>
        {{#each this}}
          <li>
-           {{name}} - <a href="#" data-url="{{url}}/commits" onclick="showCommits()">Get Commits</a>
+           {{name}} - <a href="#" data-url="{{url}}/commits" onclick="showCommits(this)">Get Commits</a>
          </li>
         {{/each}}
       </ul>
