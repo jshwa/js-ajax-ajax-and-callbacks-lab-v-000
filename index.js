@@ -7,7 +7,7 @@ function displayError() {
   $("#errors").html("I'm sorry, there's been an error. Please try again.")
 }
 
-function displayResults() {
+function displayResults(data) {
   $("#results").html("<ul>" + data.items.map(item => "<li>" + item.name + "- <a href='#' data-url='" + item.url + "/commits" + "'onclick='showCommits(this)'> Get Commits</a></li>") + "</ul>")
 }
 
