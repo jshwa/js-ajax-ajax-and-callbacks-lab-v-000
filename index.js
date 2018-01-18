@@ -9,13 +9,10 @@ function displayError() {
 
 function displayResults(data) {
   const resultsHTML = "<ul>" + data.items.map(item =>
-    `<li>
-      ${item.name} -
-      <a href='#' data-url="${item.url}/commits" onclick='${showCommits(this)}'> Get Commits</a>
+    `<li> ${item.name} - 
     </li>`) + "</ul>"
-    debugger
   $("#results").html(resultsHTML)
-}
+}s
 
 function showCommits(el) {
   $.get(el.dataset.url, function (data) {
