@@ -20,8 +20,8 @@
   </head>
   <body>
     <main id="main">
-      <form onsubmit="searchRepositories()">
-        Search: <input type="text" id="searchTerms">
+      <form onsubmit="getRepositories();return false;">
+        Username: <input type="text" id="username">
         <input type="submit">
       </form>
       <div id="errors"></div>
