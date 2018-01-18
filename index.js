@@ -8,9 +8,11 @@ function displayError() {
 }
 
 function displayResults(data) {
-  const resultsHTML = "<ul>" + data.items.map(item =>
-    `<li> ${item.name} -
-    </li>`) + "</ul>"
+  resultsHTML = data.items.map (result =>  `<div>
+        <h2><a href="${result.html_url}">${result.name}</a></h2>
+        <p><a href="#" data-repository="${result.name}" data-owner="${result.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
+        <p>${result.description}</p>
+      </div>`)
   $("#results").html(resultsHTML)
 }
 
