@@ -17,7 +17,7 @@ function displayResults(data) {
 
 function showCommits(el) {
   $.get(el.dataset.url, function (data) {
-    const commitsHTML = "<ul>" + data.map(commit => `<li> ${commit.commit.author.name} </li>`) + "</ul>";
+    const commitsHTML = "<ul>" + data.map(commit => `<li> ${commit.commit.author.name} </li>`).join('') + "</ul>";
     $('#details').html(commitsHTML);
   })
 }
