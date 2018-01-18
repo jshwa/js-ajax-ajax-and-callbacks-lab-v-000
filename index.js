@@ -4,9 +4,9 @@ function searchRepositories() {
 }
 
 function displayResults() {
-  const searchResults = JSON.parse(this.responseText)
-  const results = $('#results')
-
+  const searchResults = JSON.parse(this.responseText);
+  const results = $('#results').html();
+  results = searchResults.map(r => r.name)
 }
 
 $(document).ready(function (){
