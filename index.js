@@ -8,7 +8,7 @@ function displayError() {
 }
 
 function displayResults(data) {
-  resultsHTML = data.items.map (result =>
+  const resultsHTML = data.items.map (result =>
     ` <a href="${result.html_url}">${result.name}</a>
       <p><a href="#" data-url="${result.url}/commits" onclick="showCommits(this)">Show Commits</a></p>
       <p>${result.description}</p>`)
@@ -17,8 +17,8 @@ function displayResults(data) {
 
 function showCommits(el) {
   $.get(el.dataset.url, function (data) {
-    $('#details').html("<ul>" + data.map(commit =>
-      `<li> ${commit.commit.author.name} </li>`) + "</ul>")
+    const commitsHTML = "<ul>" + data.map(commit => `<li> ${commit.commit.author.name} </li>`) + "</ul>";
+    $('#details').html(commitsHTML);
   })
 }
 
