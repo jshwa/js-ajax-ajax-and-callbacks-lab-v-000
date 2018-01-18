@@ -9,10 +9,10 @@ function displayError() {
 
 function displayResults(data) {
   const resultsHTML = "<ul>" + data.items.map(item =>
-    `<li> ${item.name} - 
+    `<li> ${item.name} -
     </li>`) + "</ul>"
   $("#results").html(resultsHTML)
-}s
+}
 
 function showCommits(el) {
   $.get(el.dataset.url, function (data) {
