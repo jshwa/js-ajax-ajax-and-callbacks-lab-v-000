@@ -1,4 +1,4 @@
-function getRepositories() {
+function searchRepositories() {
   console.log("WTF")
 
 }
